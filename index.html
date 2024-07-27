@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壹世界</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
+    <style>
+        input, button, textarea, select {
+            outline: none;
+            resize: none;
+            border: none;
+        }
+        .home-search {
+            position: relative;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        .home-search-container {
+            padding: 100px auto;
+            text-align: center;
+        }
+        .home-search-container h1 {
+            -webkit-font-smoothing: auto;
+            font-weight: 300;
+        }
+        .home-search h1 img {
+            width: 230px;
+        }
+        .search-box-wrap {
+            padding-top: 10px;
+            position: relative;
+        }
+        .search-box {
+            background: #fff;
+            box-shadow: 0px 0 15px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            border-radius: 50px;
+            padding: 6px;
+            position: relative;
+            display: -webkit-box;   /* 旧的 Webkit 浏览器 */
+            display: -webkit-flex;  /* 针对 Webkit 浏览器 */
+            display: -ms-flexbox;   /* 针对IE 10浏览器 */
+            display: flex;
+        }
+        .search-box .icon-search {
+            position: absolute;
+            left: 20px;
+            top: 14px;
+            font-weight: 700;
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+        .search-input {
+            font-size: 16px;
+            background: #fff;
+            height: 40px;
+            width: 100%;
+            border-radius: 50px;
+            padding: 0 10px 0 42px;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        .search-btn {
+            padding: 0 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            color: #fff;
+            background: linear-gradient(to right bottom, #eb4883 0%, #e60c19 100%);
+        }
+
+        .search-btn:hover {
+            background: linear-gradient(to right bottom, #e60c19 0%, #eb4883 100%); /* Inverted gradient for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏-不一定要 -->
+
+    <!-- 搜索栏 抄自soupian.pro -->
+    <div class="container">
+        <div class="home-search col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+            <div class="home-search-container">
+                <h1><img src="" alt="">壹世界 1sj.top</h1>
+                <div class="search-box-wrap">
+                    <div class="search-box">
+                        <i class="icon-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </i>
+                        <input class="search-input" type="text" name="key" id="keyword" autocomplete="off" placeholder="搜索你想要的内容" onfocus="this.placeholder=''" onblur="this.placeholder='搜索你想看的'">
+                        <i class="icon-close-o" style="display: none;"></i>
+                        <button class="search-btn" onclick="Click()">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="list-responsive" aria-label="链接组">
+            <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">我的网站</span>
+            <div id="detail-links" class="row py-2" >
+                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                    <a href="https://fun.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button">开启异世界之旅</a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                    <a href="https://blog.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button">我的博客</a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                    <a href="https://teedoc-coding.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button">编程笔记</a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                    <a href="https://webstack.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button">网址导航</a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                    <a href="https://github.com/lumengde123?tab=repositories" class="btn btn-outline-danger text-truncate fs-7" type="button">Github</a>
+                </div>
+            </div>
+
+            
+
+        </section>
+    </div>
+
+
+
+    <script>
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
