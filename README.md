@@ -15,13 +15,15 @@
     # 5. 创建初始提交  
     git commit -m "Initial commit"  
   
-    # 6. 添加远程仓库  
-    git remote add origin https://github.com/lumengde123/1sj.top.git  
+    #6. 切换分支为 main
+    git branch -M main
+
+    # 7. 添加远程仓库  
+    git remote add origin https://github.com/yourusername/new-repo-name.git  
   
-    # 7. 推送本地代码到远程仓库  
+    # 8. 推送本地代码到远程仓库  
     git branch -M main  
     git push -u origin main  
-
 
   
 # 后续推送：  
@@ -50,3 +52,8 @@
     # 4. 正常进行 push/pull 操作  
     git pull origin main  
     git push origin main  
+
+# 其他内容补充  
+
+- 搜索栏抄自soupian.pro，功能由chatGPT编写  
+- 标签抄自顶漫画详情页  
