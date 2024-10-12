@@ -4,7 +4,7 @@
     git config --global user.email "你的邮箱"  
   
     # 2. 进入项目目录  
-    cd /path/to/your/project  
+    `cd /path/to/your/project`   
   
     # 3. 初始化本地 Git 仓库  
     git init  

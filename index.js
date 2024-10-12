@@ -37,7 +37,8 @@ const SearchComponent = {
     data() {
         return {
             query: '',
-            selectedEngine: 'baidu'
+            selectedEngine: 'baidu',
+            placeholder: '输入搜索内容', // 初始化 placeholder
         };
     },
     methods: {
@@ -97,10 +98,10 @@ const links = new Vue({
                 title: '我的网站',
                 links: [
                     {link: 'https://fun.1sj.top', name: '异世界之旅'},
-                    {link: 'https://hope.1sj.top', name: 'Hope博客'},
+                    {link: 'https://hope.1sj.top', name: 'Hope博客(主)'},
                     {link: 'https://blog.1sj.top', name: 'Hexo博客(废)'},
                     {link: 'https://astroyi.1sj.top', name: 'Astro博客(备)'},
-                    {link: 'https://lsky.1sj.top/dashboard', name: '兰空图床'},
+                    {link: 'https://lsky.1sj.top/dashboard', name: '兰空图床'},     // http://142.171.245.130:7791/dashboard
                     {link: 'https://teedoc-coding.1sj.top', name: '编程笔记'},
                     {link: 'https://webstack.1sj.top', name: '网址导航'},
                     {link: 'https://github.com/lumengde123?tab=repositories', name: 'Github'},
@@ -117,9 +118,10 @@ const links = new Vue({
                     {link: 'https://www.aliyundrive.com/drive/file/all', name: '阿里云盘'},
                     {link: 'https://cloud.189.cn/web/main/file/folder/-11', name: '天翼云盘'},
                     {link: 'https://neodb.social/users/lumengde/', name: 'NeoDB'},
+                    {link: 'https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=755949636', name: '微信公众号'},
                     {link: 'https://两元店.com/#/login', name: '两元店'},
                     {link: 'https://m2.meimeifans123.cyou', name: 'mmyun'},
-                    {link: 'https://www.youtube.com/', name: 'Youtube'},
+                    {link: 'https://www.jb51.net/', name: '脚本之家'},
                     {link: 'https://www.cnodejs.org/', name: 'Node.js中文社区'},
                     {link: 'https://www.academia.edu/', name: 'Academia-freePDF'}
                 ]
@@ -132,18 +134,63 @@ const links = new Vue({
                     {link: 'https://www.qiyuai.net/', name: '奇域AI'},
                     {link: 'https://jimeng.jianying.com/ai-tool/home/', name: '即梦AI'},
                     {link: 'https://klingai.kuaishou.com/', name: '可灵AI'},
+                    {link: 'https://miaohua.sensetime.com/', name: '秒画'},
                 ]
             },
             {
                 title: '前端网站',
                 links: [
-                    { link: 'https://www.bootstrap.cn/doc/book/2.html', name: 'Bootstrap5.cn' },
+                    { link: 'https://www.bootstrap.cn/doc/book/2.html', name: 'Bootstrap5中文手册' },
                     { link: 'https://www.stackoverflow.com', name: 'Stack Overflow' },
                     { link: 'https://juejin.cn', name: '掘金' },
                     { link: 'https://codepen.io', name: 'Code-Pen' },
                     { link: 'https://jsbin.com', name: 'JS Bin' },
                     { link: 'https://developer.mozilla.org/zh-CN/', name: 'MDN' },
                     { link: 'https://fontawesome.com.cn/v5', name: 'Fontawesome v5-cn' },
+                ]
+            },
+            {
+                title: '影视天地',
+                links: [
+                    { link: 'https://www.yfsp.tv/', name: '爱壹帆[要VPN]' },
+                    { link: 'https://www.hhduc.com/', name: '金牌影院[别VPN]' },
+                    { link: 'https://yingshi.tv/', name: '影视TV[VPN更快]' },
+                    { link: 'https://soupian.pro/', name: '搜片.com' },
+                    
+                    
+                ]
+            },
+            {
+                title: '视频阅读社区论坛',
+                links: [
+                    {link: 'https://www.youtube.com/', name: 'Youtube'},
+                    {link: 'https://www.ixigua.com/?wid_try=1', name: '西瓜视频'},
+                    {link: 'https://www.douyin.com/', name: '抖音'},
+                    {link: 'https://weread.qq.com/', name: '微信读书'},
+                    {link: 'https://www.zhihu.com/', name: '知乎'},
+                    {link: 'https://www.xiaohongshu.com/explore', name: '小红书'},
+                    {link: 'https://nga.cn/', name: 'NGA.CN-游戏社区'},
+                    
+                ]
+            },
+            {
+                title: '暂未归类',
+                links: [
+                    { link: 'https://nav.guidebook.top/', name: '数字生活-超全导航站' },
+                    { link: 'https://www.kbzhan.com/index.html', name: '影视小说网' },
+                    { link: 'https://www.wuxiaworld.com/', name: '武侠世界(英文小说)' },
+                    { link: 'http://www.9663.com/k/steamyizhiyouxi/', name: '9663安卓网' },
+                    { link: 'https://www.67tool.com/', name: '即时工具-工具箱' },
+                    
+                    
+                ]
+            },
+            {
+                title: '网页链接暂存',
+                links: [
+                    { link: 'https://uiverse.io/mrhyddenn/warm-wasp-21', name: '骨架屏代码-uiverse.io' },
+                    
+                    
                 ]
             },
 
