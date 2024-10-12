@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>壹世界</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
     <style>
     
     </style>
@@ -14,159 +14,20 @@
     <!-- 导航栏-不一定要 -->
 
     <div class="container" style="flex: 1;">
+
         <!-- 搜索栏 抄自soupian.pro -->
-        <div class="home-search col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-            <div class="home-search-container">
-                <h1><img src="" alt="">壹世界 1sj.top</h1>
-                <div class="search-box-wrap">
-                    <div class="search-box">
-                        <i class="icon-search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                            </svg>
-                        </i>
-                        <select id="search-engine" class="search-engine-select">
-                            <option value="baidu">百度</option>
-                            <option value="google">谷歌</option>
-                            <option value="zhihu">知乎</option>
-                            <option value="bilibili">Bili</option>
-                            <option value="tieba">贴吧</option>
-                            <option value="douyin">抖音</option>
-                            <option value="douyin">小红书</option>
-                        </select>
-                        <input class="search-input" type="text" name="key" id="search-input" autocomplete="off" placeholder="输入搜索内容" onfocus="this.placeholder=''" onblur="this.placeholder='输入搜索内容'" onkeyup="handleKeyPress(event)">
-                        <i class="icon-close-o" style="display: none;"></i>
-                        <button class="search-btn" onclick="performSearch()">搜索</button>
-                    </div>
-                </div>
-            </div>
+        <div id="home-search">
+            <search-component></search-component>
         </div>
 
         <!-- 链接组，抄自顶漫画 -->
-        <section class="list-responsive" aria-label="链接组">
-            <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">我的网站</span>
-            <div id="detail-links" class="row py-2" >
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://fun.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">异世界之旅</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://blog.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Hexo博客</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://astroyi.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Astro博客</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://hope.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Hope博客</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://lsky.1sj.top/dashboard" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">兰空图床</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://teedoc-coding.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">编程笔记</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://webstack.1sj.top" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">网址导航</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://github.com/lumengde123?tab=repositories" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Github</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="./memo.html" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">静态备忘录</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="#" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">简易导航站</a>
-                </div>
-            </div>
-
-            <!-- 第二块链接组 -->
-            <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">工具网站</span>
-            <div id="detail-links" class="row py-2" >
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://dns.console.aliyun.com/#/dns/setting/lumengde.com" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">阿里域名控制台</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://vercel.com/lumengde123s-projects" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Vercel</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://dash.cloudflare.com/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Cloudflare</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Gmail</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.bilibili.com" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Bilibili</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://neodb.social/users/lumengde/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">NeoDB</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.zhihu.com" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">知乎</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://两元店.com/#/login" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">两元店</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://m2.meimeifans123.cyou" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">mmyun</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.youtube.com/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Youtube</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.cnodejs.org/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Node.js中文社区</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.academia.edu/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Academia-freePDF</a>
-                </div>
-                
-            </div>
-
-
-            <!-- 第三块链接组：AI专题 -->
-            <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">AI工具</span>
-            <div id="detail-links" class="row py-2" >
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://chat.openai.com" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">ChatGPT</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.openai-use.com/web/Login.html" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">ChatGPT国内版</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://kimi.moonshot.cn/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Kimi</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.qiyuai.net/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">奇域AI</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://jimeng.jianying.com/ai-tool/home/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">即梦AI</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://klingai.kuaishou.com/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">可灵AI</a>
-                </div>
-            </div>
-
-
-            <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">前端相关</span>
-            <div id="detail-links" class="row py-2" >
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.bootstrap.cn/doc/book/2.html" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Bootstrap5.cn</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://www.stackoverflow.com" title="" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Stack Overflow</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://juejin.cn" title="技术内容分享与交流平台" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">掘金</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://codepen.io" title="可在线执行前端代码" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Code-Pen</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://jsbin.com" title="可在线执行前端代码" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">JS Bin</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://developer.mozilla.org/zh-CN/" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">MDN</a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                    <a href="https://fontawesome.com.cn/v5" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">Fontawesome v5-cn</a>
+        <section id="links" class="list-responsive" aria-label="链接组">
+            <div v-for="(group, groupIndex) in linkGroups" :key="groupIndex">
+                <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">{{ group.title }}</span>
+                <div id="detail-links" class="row py-2">
+                    <div v-for="(item, index) in group.links" :key="index" class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
+                        <a :href="item.link" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">{{ item.name }}</a>
+                    </div>
                 </div>
             </div>
 
@@ -181,55 +42,8 @@
     </footer>
 
 
-    <script>
-        // 搜索框 根据单选框确定搜索引擎
-        function performSearch() {
-            const query = document.getElementById('search-input').value;
-            const engine = document.getElementById('search-engine').value;
-            let url = '';
-
-            if (query) {
-                switch(engine) {
-                    case 'baidu':
-                        url = `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`;
-                        break;
-                    case 'google':
-                        url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-                        break;
-                    case 'zhihu':
-                        url = `https://www.zhihu.com/search?type=content&q=${encodeURIComponent(query)}`;
-                        break;
-                    case 'bilibili':
-                        url = `https://search.bilibili.com/all?keyword=${encodeURIComponent(query)}`;
-                        break;
-                    case 'tieba':
-                        url = `https://tieba.baidu.com/f/search/res?ie=utf-8&qw=${encodeURIComponent(query)}`;
-                        break;
-                    case 'douyin':
-                        url = `https://www.douyin.com/search/${encodeURIComponent(query)}`;
-                        break;
-                    case 'redbook':
-                        url = `https://www.xiaohongshu.com/search_result?keyword=${query}&source=web_explore_feed`;
-                        break;
-                }
-                window.open(url, '_blank');
-            }
-        }
-        // 搜索框 聚焦时按回车也可以搜索
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                performSearch();
-            }
-        }
-
-        // 获取必应每日图片并渲染到页面上___遇到跨域问题，目前用的别人写的接口
-
-        // 初始化图片加载
-        fetchDailyImage();
-
-        // 初始化图片加载
-        fetchDailyImage();
-    </script>
+    <script src="vue.js"></script>
+    <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
