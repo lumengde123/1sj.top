@@ -106,6 +106,7 @@ const links = new Vue({
                     {link: 'https://webstack.1sj.top', name: '网址导航'},
                     {link: 'https://github.com/lumengde123?tab=repositories', name: 'Github'},
                     {link: './memo.html', name: '静态备忘录'},
+                    {link: './acg.html', name: '影视数据暂存'},
                 ]
             },
             {
@@ -117,6 +118,7 @@ const links = new Vue({
                     {link: 'https://mail.google.com/mail/u/0/#inbox', name: 'Gmail'},
                     {link: 'https://www.aliyundrive.com/drive/file/all', name: '阿里云盘'},
                     {link: 'https://cloud.189.cn/web/main/file/folder/-11', name: '天翼云盘'},
+                    {link: 'https://docsmall.com/image-compress', name: 'docsmall图片压缩'},
                     {link: 'https://neodb.social/users/lumengde/', name: 'NeoDB'},
                     {link: 'https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=755949636', name: '微信公众号'},
                     {link: 'https://两元店.com/#/login', name: '两元店'},

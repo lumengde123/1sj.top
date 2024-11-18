@@ -26,7 +26,12 @@
                 <span id="link-source" class="fs-3 mb-2 py-1" style="border-bottom: 1px solid #dee2e6;width: 100%;display: block;scroll-margin-top:55px">{{ group.title }}</span>
                 <div id="detail-links" class="row py-2">
                     <div v-for="(item, index) in group.links" :key="index" class="col-lg-2 col-md-4 col-sm-6 d-grid mt-2 mb-2">
-                        <a :href="item.link" class="btn btn-outline-danger text-truncate fs-7" type="button" target="_blank">{{ item.name }}</a>
+                        <a :href="item.link" 
+                            class="btn btn-outline-danger text-truncate fs-7" 
+                            type="button" 
+                            target="_blank">
+                            {{ item.name }}
+                        </a>
                     </div>
                 </div>
             </div>
